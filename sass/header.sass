@@ -15,6 +15,9 @@ body
 .hidden
 	display: none
 
+a
+	outline: none !important
+
 
 strong, b
 	font-family: "RobotoBold", sans-serif
@@ -40,13 +43,28 @@ h1, h2, h3, h4, h5, h6, .button
 		padding: 0
 		margin: 0
 	.sf-menu
+		ul
+			background-color: $main-color
+			>li
+				border-bottom: lighten($main-color,5%) 1px solid
 		margin: auto
 		float: none
 		display: inline-block
+		font-family: "RobotoCondensedRegular", sans-serif
+		font-size: em(15px)
 		li
 			background-color: transparent
+			&:hover
+				background-color: darken($main-color,3%)
+				a
+					color: $accent-color 
 			a
 				color: #fff
+				border: none
+				padding: 22px 28px 20px
+				.fa
+					font-size: 11px
+					margin-left: 2px
 		> li
 			display: inline-block
 	
